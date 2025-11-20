@@ -1,0 +1,8 @@
+crop_name,description,days_to_grow,regrowth,seed_price,sell_price,multiple_harvests,edible,season
+Ancient Fruit,"A rare and exotic fruit with a mysterious origin, grown from Ancient Seeds.",28,7,100,550,YES,YES,Any
+Cactus Fruit,"The sweet fruit of the prickly pear cactus.",12,3,150,75,YES,YES,Any
+Fiber Seeds,"Plant these to grow fiber crops, useful for crafting.",7,0,5,1,NO,NO,Any
+Mixed Flower Seeds,"A mix of flower seeds that grow into a variety of seasonal flowers.",7,0,10,30,NO,NO,Any
+Mixed Seeds,"A random assortment of seeds that grow into seasonal crops.",0,0,0,0,NO,NO,Any
+Qi Fruit,"A strange fruit requested by Mr. Qi, with an unusual appearance.",4,0,1,1,NO,YES,Any
+Tea Leaves,"The young leaves of a tea plant, used to make tea.",20,7,50,50,YES,NO,Any

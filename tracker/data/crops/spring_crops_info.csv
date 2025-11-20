@@ -1,0 +1,15 @@
+crop_name,description,days_to_grow,regrowth,seed_price,sell_price,multiple_harvests,edible,season
+Blue Jazz,"The flower grows in a sphere to invite as many butterflies as possible.",7,0,30,50,NO,NO,Spring
+Carrot,"A fast-growing, colorful tuber that makes for a great snack.",3,0,35,35,NO,YES,Spring
+Cauliflower,"Valuable, but slow-growing. Despite its pale color, the florets are packed with nutrients.",12,0,80,175,NO,YES,Spring
+Coffee Bean,"Plant in spring or summer to grow a coffee plant. Place five beans in a keg to make coffee.",10,2,100,15,YES,NO,Spring
+Garlic,"Adds a wonderful zestiness to dishes. High quality garlic can be pretty spicy.",4,0,40,60,NO,YES,Spring
+Green Bean,"A juicy little bean with a cool, crisp snap.",10,3,60,40,YES,YES,Spring
+Kale,"The waxy leaves are great in soups and stir fries.",6,0,70,110,NO,YES,Spring
+Parsnip,"A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients.",4,0,20,35,NO,YES,Spring
+Potato,"A widely cultivated tuber.",6,0,50,80,NO,YES,Spring
+Rhubarb,"The stalks are extremely tart, but make a great dessert when sweetened.",13,0,100,220,NO,YES,Spring
+Strawberry,"A sweet, juicy favorite with an appealing red color.",8,4,100,120,YES,YES,Spring
+Tulip,"The most popular spring flower. Has a very faint sweet smell.",6,0,20,30,NO,NO,Spring
+Unmilled Rice (Irrigated),"Rice in its rawest form. Run this through a mill to increase the value.",6,0,40,30,NO,NO,Spring
+Unmilled Rice (Unirrigated),"Rice in its rawest form. Run this through a mill to increase the value.",8,0,40,30,NO,NO,Spring

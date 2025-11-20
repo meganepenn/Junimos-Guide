@@ -1,0 +1,19 @@
+crop_name,description,days_to_grow,regrowth,seed_price,sell_price,multiple_harvests,edible,season
+Blueberry,"A popular berry reported to have many health benefits. The blue skin has the highest nutrient concentration.",13,4,80,50,YES,YES,Summer
+Coffee Bean,"Plant in spring or summer to grow a coffee plant. Place five beans in a keg to make coffee.",10,2,100,15,YES,NO,Summer
+Corn,"One of the most popular grains. The sweet, fresh cobs are a summer favorite.",14,4,150,50,YES,YES,Summer
+Hops,"A bitter, tangy flower used to flavor beer.",11,1,60,25,YES,NO,Summer
+Hot Pepper,"Fiery hot with a hint of sweetness.",5,3,40,40,YES,YES,Summer
+Melon,"A cool, sweet summer treat.",12,0,80,250,NO,YES,Summer
+Pineapple,"A sweet and tangy tropical treat.",14,0,240,300,NO,YES,Summer
+Poppy,"In addition to its colorful flower, the Poppy has culinary and medicinal uses.",7,0,100,140,NO,NO,Summer
+Radish,"A crisp and refreshing root vegetable with hints of pepper when eaten raw.",6,0,40,90,NO,YES,Summer
+Red Cabbage,"Often used in salads and coleslaws. The color can range from purple to blue to green-yellow depending on soil conditions.",9,0,100,260,NO,YES,Summer
+Starfruit,"An extremely juicy fruit that grows in hot, humid weather. Slightly sweet with a sour undertone.",13,0,400,750,NO,YES,Summer
+Summer Spangle,"A tropical bloom that thrives in the humid summer air. Has a sweet, tangy aroma.",8,0,50,90,NO,NO,Summer
+Summer Squash,"A curved yellow squash that is harvested while immature, and still tender.",6,3,45,45,YES,YES,Summer
+Sunflower,"A common misconception is that the flower turns so it's always facing the sun.",8,0,200,80,NO,NO,Summer
+Taro Root (Irrigated),"This starchy root is one of the most ancient crops.",7,0,60,100,NO,YES,Summer
+Taro Root (Unirrigated),"This starchy root is one of the most ancient crops.",10,0,60,100,NO,YES,Summer
+Tomato,"Rich and slightly tangy, the Tomato has a wide variety of culinary uses.",11,4,50,60,YES,YES,Summer
+Wheat,"One of the most widely cultivated grains. Makes a great flour for breads and cakes.",4,0,10,25,NO,NO,Summer

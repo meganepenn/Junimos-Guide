@@ -1,0 +1,53 @@
+crop_name,description,season,type,source,used in
+Amaranth,A purple grain cultivated by an ancient civilization.,Fall,crop,Grown,"""Cow's Delight"" Quest"
+Artichoke,"The bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior.",Fall,crop,Grown,Not Used
+Beet,"A sweet and earthy root vegetable. As a bonus, the leaves make a great salad.",Fall,crop,Grown,"""Mayor's Need"" Quest, The Missing Bundle"
+Bok Choy,The leafy greens and fibrous stalks are healthy and delicious.,Fall,crop,Grown,Not Used
+Corn,"One of the most popular grains. The sweet, fresh cobs are a summer favorite.",Fall,crop,Grown,"Fodder Bundle, Brewer's Bundle"
+Cranberries,These tart red berries are a traditional winter food.,Fall,crop,Grown,Not Used
+Eggplant,A rich and wholesome relative of the tomato. Delicious fried or stewed.,Fall,crop,Grown,Not Used
+Fairy Rose,An old folk legend suggests that the sweet smell of this flower attracts fairies.,Fall,crop,Grown,Fair Rose Honey
+Grape,A sweet cluster of fruit.,Fall,crop,Grown,Enchanter's Bundle (as Wine)
+Pumpkin,"A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",Fall,crop,Grown,"Quality Crops Bundle, liked by Abigail"
+Sunflower,A common misconception is that the flower turns so it's always facing the sun.,Fall,crop,Grown,"Dye Bundle, Field Research Bundle"
+Sweet Gem Berry,It's by far the sweetest thing you've ever smelled.,Fall,crop,Rare Seed,"""The Mysterious Qi"" Quest"
+Wheat,One of the most widely cultivated grains. Makes a great flour for breads and cakes.,Fall,crop,Grown,"Fodder Bundle, Brewer's Bundle, Flour"
+Yam,A starchy tuber with a lot of culinary versatility.,Fall,crop,Grown,Fall Crops Bundle
+Ancient Fruit,"A rare and exotic fruit with a mysterious origin, grown from Ancient Seeds.",Any,crop,Greenhouse,Not Used
+Cactus Fruit,The sweet fruit of the prickly pear cactus.,Any,crop,"Greenhouse, Desert",Loved by Linus
+Fiber Seeds,"Plant these to grow fiber crops, useful for crafting.",Any,seed,Crafted,Not Used
+Mixed Flower Seeds,A mix of flower seeds that grow into a variety of seasonal flowers.,Any,seed,Crafted,Not Used
+Mixed Seeds,A random assortment of seeds that grow into seasonal crops.,Any,seed,Drops,Not Used
+Qi Fruit,"A strange fruit requested by Mr. Qi, with an unusual appearance.",Any,crop,Qi's Crop Quest,"""Qi's Crop"" Quest"
+Tea Leaves,"The young leaves of a tea plant, used to make tea.",Any,crop,Tea Bush,Enchanter's Bundle
+Blue Jazz,The flower grows in a sphere to invite as many butterflies as possible.,Spring,crop,Grown,Blue Jazz Honey
+Carrot,"A fast-growing, colorful tuber that makes for a great snack.",Spring,crop,Ginger Island Drop,"""The Pirate's Wife"" Quest"
+Cauliflower,"Valuable, but slow-growing. Despite its pale color, the florets are packed with nutrients.",Spring,crop,Grown,Spring Crops Bundle
+Coffee Bean,Plant in spring or summer to grow a coffee plant. Place five beans in a keg to make coffee.,Spring,crop,"Rare Drop, Grown",Not Used
+Garlic,Adds a wonderful zestiness to dishes. High quality garlic can be pretty spicy.,Spring,crop,Grown,Not Used
+Green Bean,"A juicy little bean with a cool, crisp snap.",Spring,crop,Grown,Spring Crops Bundle
+Kale,The waxy leaves are great in soups and stir fries.,Spring,crop,Grown,Not Used
+Parsnip,A spring tuber closely related to the carrot. It has an earthy taste and is full of nutrients.,Spring,crop,Grown,Spring Crops Bundle
+Potato,A widely cultivated tuber.,Spring,crop,Grown,Spring Crops Bundle
+Rhubarb,"The stalks are extremely tart, but make a great dessert when sweetened.",Spring,crop,Oasis,Not Used
+Strawberry,"A sweet, juicy favorite with an appealing red color.",Spring,crop,Egg Festival,Not Used
+Tulip,The most popular spring flower. Has a very faint sweet smell.,Spring,crop,Grown,Bee Houses
+Unmilled Rice (Irrigated),Rice in its rawest form. Run this through a mill to increase the value.,Spring,crop,Rice paddy,Mill to Rice
+Unmilled Rice (Unirrigated),Rice in its rawest form. Run this through a mill to increase the value.,Spring,crop,Dry soil,Mill to Rice
+Blueberry,A popular berry reported to have many health benefits. The blue skin has the highest nutrient concentration.,Summer,crop,Grown,Not Used
+Coffee Bean,Plant in spring or summer to grow a coffee plant. Place five beans in a keg to make coffee.,Summer,crop,Grown,Not Used
+Corn,"One of the most popular grains. The sweet, fresh cobs are a summer favorite.",Summer,crop,Grown,Not Used
+Hops,"A bitter, tangy flower used to flavor beer.",Summer,crop,Grown,Pale Ale
+Hot Pepper,Fiery hot with a hint of sweetness.,Summer,crop,Grown,"Summer Crops Bundle, ""A Soldier's Star"" Quest, Loved by Shane"
+Melon,"A cool, sweet summer treat.",Summer,crop,Grown,Quality Crops Bundle
+Pineapple,A sweet and tangy tropical treat.,Summer,crop,Ginger Island,Not Used
+Poppy,"In addition to its colorful flower, the Poppy has culinary and medicinal uses.",Summer,crop,Grown,Loved by Penny
+Radish,A crisp and refreshing root vegetable with hints of pepper when eaten raw.,Summer,crop,Grown,Not Used
+Red Cabbage,Often used in salads and coleslaws. The color can range from purple to blue to green-yellow depending on soil conditions.,Summer,crop,Grown,Dye Bundle
+Starfruit,"An extremely juicy fruit that grows in hot, humid weather. Slightly sweet with a sour undertone.",Summer,crop,Grown,Not Used
+Summer Spangle,"A tropical bloom that thrives in the humid summer air. Has a sweet, tangy aroma.",Summer,crop,Grown,Honey
+Summer Squash,"A curved yellow squash that is harvested while immature, and still tender.",Summer,crop,Grown,Not Used
+Taro Root (Irrigated),This starchy root is one of the most ancient crops.,Summer,crop,Water grown,"""The Pirate's Wife"" Quest"
+Taro Root (Unirrigated),This starchy root is one of the most ancient crops.,Summer,crop,Grown,"""The Pirate's Wife"" Quest"
+Tomato,"Rich and slightly tangy, the Tomato has a wide variety of culinary uses.",Summer,crop,Grown,Summer Crops Bundle
+Powdermelon,"Named for the powdery coating that forms on the surface, this melon is crisp and sweet, with a delicate flavor.",Winter,crop,Grown,Not Used

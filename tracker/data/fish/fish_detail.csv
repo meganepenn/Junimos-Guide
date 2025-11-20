@@ -1,0 +1,109 @@
+Name,Description,Location,Time,Season,Weather,Size (inches),Difficulty & Behavior,Base XP,Used In
+Pufferfish,Inflates when threatened.,"Ocean, Ginger Island oceans",12pm – 4pm,"Summer
+(All Seasons on Ginger Island)",Sun,1-37,80 floater,29,"Specialty Fish Bundle Abigail  (loved gift)
+ ""Aquatic Research"" Quest"
+Anchovy,A small silver fish found in the ocean.,Ocean,Anytime,"Spring
+ Fall",Any,1-17,30 dart,13,No Uses
+Tuna,A large fish that lives in the ocean.,"Ocean, Ginger Island oceans",6am – 7pm,"Summer
+ Winter
+(All Seasons on Ginger Island)",Any,12-61,70 smooth,26,"Ocean Fish Bundle
+ Quality Fish Bundle Fish Taco"
+Sardine,A common ocean fish.,Ocean,6am – 7pm,"Spring
+ Fall
+ Winter",Any,1-13,30 dart,13,Ocean Fish Bundle Dish O' The Sea
+Bream,A fairly common river fish that becomes active at night.,River (Town+Forest),6pm – 2am,All Seasons,Any,12-31,35 smooth,14,Night Fishing Bundle Baked Fish
+Largemouth Bass,A popular fish that lives in lakes.,Mountain Lake,6am – 7pm,All Seasons,Any,11-31,50 mixed,19,"Lake Fish Bundle
+ Quality Fish Bundle Crispy Bass ""Fish Casserole"" Quest"
+Smallmouth Bass,A freshwater fish that is very sensitive to pollution.,"River (Town)
+Forest Pond",Anytime,"Spring
+ Fall",Any,12-25,28 mixed,12,No Uses
+Rainbow Trout,A freshwater trout with colorful markings.,"River (Town+Forest)
+Mountain Lake",6am – 7pm,Summer,Sun,10-26,45 mixed,18,Trout Soup
+Salmon,Swims upstream to lay its eggs.,River (Town+Forest),6am – 7pm,Fall,Any,24-66,50 mixed,19,Salmon Dinner
+Walleye,A freshwater fish caught at night.,"River (Town+Forest)
+Forest Pond
+Mountain Lake",12pm – 2am,"Fall
+ Winter with Rain Totem",Rain,10-41,45 smooth,18,"Night Fishing Bundle
+ Quality Fish Bundle"
+Perch,A freshwater fish of the winter.,"River (Town+Forest)
+Forest Pond
+Mountain Lake",Anytime,Winter,Any,10-25,35 dart,14,No Uses
+Carp,A common pond fish.,"Mountain Lake
+Secret Woods Pond
+The Sewers",Anytime,All Seasons,Any,15-51,15 mixed,8,Lake Fish Bundle Carp Surprise
+Catfish,An uncommon fish found in streams.,"River (Town+Forest)
+Secret Woods Pond
+Witch's Swamp",6am – 12am,"Spring
+ Fall
+( Spring &
+ Summer in Secret Woods Pond)",Rain,12-73,75 mixed,28,River Fish Bundle Willy  (loved gift)
+Pike,A freshwater fish that's difficult to catch.,"River (Town+Forest)
+Forest Pond",Anytime,"Summer
+ Winter",Any,15-61,60 dart,23,No Uses
+Sunfish,A common river fish.,River (Town+Forest),6am – 7pm,"Spring
+ Summer","Sun
+ Wind",5-16,30 mixed,13,River Fish Bundle Baked Fish
+Red Mullet,Long ago these were kept as pets.,Ocean,6am – 7pm,"Summer
+ Winter",Any,8-23,55 smooth,21,No Uses
+Herring,A common ocean fish.,Ocean,Anytime,"Spring
+ Winter",Any,8-21,25 dart,11,No Uses
+Eel,"A long, slippery little fish.",Ocean,4pm – 2am,"Spring
+ Fall",Rain,12-81,70 smooth,26,Night Fishing Bundle Fried Eel Spicy Eel
+Octopus,A mysterious and intelligent creature.,Ocean,6am – 1pm,Summer,Any,12-49,95 sinker,34,Master Fisher's Bundle Willy  (loved gift)
+Red Snapper,A popular fish with a nice red color.,Ocean,6am – 7pm,"Summer
+ Fall
+ Winter with Rain Totem",Rain,8-26,40 mixed,16,Ocean Fish Bundle
+Squid,A deep sea creature that can grow to enormous size.,Ocean,6pm – 2am,Winter,Any,12-49,75 sinker,28,"Fried Calamari ""Catch a Squid"" Quest"
+Sea Cucumber,"A slippery, slimy creature found on the ocean floor.",Ocean,6am – 7pm,"Fall
+ Winter",Any,3-21,40 sinker,16,Lucky Lunch Willy  (loved gift)
+Super Cucumber,"A rare, purple variety of sea cucumber.","Ocean, Ginger Island oceans",6pm – 2am,"Summer
+ Fall
+(All Seasons on Ginger Island)",Any,12-37,80 sinker,29,Wizard  (loved gift)
+Ghostfish,"A pale, blind fish found in underground lakes.","Mines (20, 60)
+Ghost drops",Anytime,All Seasons,Any,10-36,50 mixed,19,Specialty Fish Bundle
+Stonefish,A bizarre fish that's shaped like a brick.,Mines 20F,Anytime,All Seasons,Any,14-16,65 sinker,24,No Uses
+Ice Pip,A rare fish that thrives in extremely cold conditions.,Mines 60F,Anytime,All Seasons,Any,7-9,85 dart,31,No Uses
+Lava Eel,It can somehow survive in pools of red-hot lava.,"Mines 100F
+Volcano Caldera",Anytime,All Seasons,Any,31-33,90 mixed,33,Master Fisher's Bundle
+Sandfish,It tries to hide using camouflage.,The Desert,6am – 8pm,All Seasons,Any,8-25,65 mixed,24,Specialty Fish Bundle Penny  (loved gift)
+Scorpion Carp,It's like a regular carp but with a sharp stinger.,"The Desert
+*Requires fishing level 4*",6am – 8pm,All Seasons,Any,12-33,90 dart,33,Master Fisher's Bundle
+Flounder,"It lives on the bottom, so both eyes are on top of its head.","Ocean, Ginger Island oceans",6am – 8pm,"Spring
+ Summer
+(All Seasons on Ginger Island)",Any,4-17,50 sinker,19,Seafoam Pudding
+Midnight Carp,This shy fish only feels comfortable at night.,"Mountain Lake,
+Cindersap Forest pond,
+Ginger Island pond and river",10pm – 2am,"Fall
+ Winter
+(All Seasons on Ginger Island)",Any,12-53,55 mixed,21,Seafoam Pudding
+Sturgeon,An ancient bottom-feeder with a dwindling population. Females can live up to 150 years.,Mountain Lake,6am – 7pm,"Summer
+ Winter",Any,12-61,78 mixed,29,Lake Fish Bundle Willy  (loved gift)
+Tiger Trout,A rare hybrid trout that cannot bear offspring of its own.,River (Town+Forest),6am – 7pm,"Fall
+ Winter",Any,10-21,60 dart,23,River Fish Bundle
+Bullhead,A relative of the catfish that eats a variety of foods off the lake bottom.,Mountain Lake,Anytime,All Seasons,Any,12-31,46 smooth,18,Lake Fish Bundle
+Tilapia,A primarily vegetarian fish that prefers warm water.,"Ocean, Ginger Island rivers",6am – 2pm,"Summer
+ Fall
+(All Seasons on Ginger Island)",Any,11-31,50 mixed,19,Ocean Fish Bundle
+Chub,A common freshwater fish known for its voracious appetite.,"Forest River
+Mountain Lake",Anytime,All Seasons,Any,12-25,35 dart,14,Field Research Bundle
+Dorado,A fierce carnivore with brilliant orange scales.,River (Forest),6am – 7pm,Summer,Any,24-33,78 mixed,29,No Uses
+Albacore,"Prefers temperature ""edges"" where cool and warm water meet.",Ocean,"6am – 11am
+6pm – 2am","Fall
+ Winter",Any,20-41,60 mixed,23,"""Fish Stew"" Quest"
+Shad,"Lives in a school at sea, but returns to the rivers to spawn.",River (Town+Forest),9am – 2am,"Spring
+ Summer
+ Fall",Rain,20-49,45 smooth,18,"River Fish Bundle
+ Quality Fish Bundle"
+Lingcod,A fearsome predator that will eat almost anything it can cram into its mouth.,"River (Town+Forest)
+Mountain Lake",Anytime,Winter,Any,30-51,85 mixed,31,"""Catch a Lingcod"" Quest"
+Halibut,A flat fish that lives on the ocean floor.,Ocean,"6am – 11am
+7pm – 2am","Spring
+ Summer
+ Winter",Any,10-34,50 sinker,19,No Uses
+Woodskip,A very sensitive fish that can only live in pools deep in the forest.,"Secret Woods Pond
+Forest Farm",Anytime,All Seasons,Any,11-31,50 mixed,19,Specialty Fish Bundle
+Void Salmon,"A salmon, twisted by void energy. The fresh meat is jet black, but rapidly turns pink when exposed to air.",Witch's Swamp,Anytime,All Seasons,Any,24-66,80 mixed,29,The Missing Bundle
+Slimejack,He's coated in a very thick layer of slime. He keeps slipping out of your hands!,Mutant Bug Lair,Anytime,All Seasons,Any,8-26,55 dart,21,No Uses
+Stingray,"Despite having a toxic stinger, these fish are shy and prefer to avoid humans.",Pirate Cove (Ginger Island),Anytime,All Seasons,Any,18-61,80 sinker,29,No Uses
+Lionfish,"An aggressive, predatory fish with venomous spines.",Ginger Island Ocean,Anytime,All Seasons,Any,3-13,50 smooth,19,No Uses
+Blue Discus,A brightly colored tropical fish that is popular in aquariums.,Ginger Island Pond and Rivers,Anytime,All Seasons,Any,2-10,60 dart,23,No Uses

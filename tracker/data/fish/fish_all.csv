@@ -1,0 +1,118 @@
+Name,Description,Location,Season,Used In
+Pufferfish,Inflates when threatened.,"Ocean, Ginger Island oceans","Summer
+(All Seasons on Ginger Island)","Specialty Fish Bundle Abigail  (loved gift)
+ ""Aquatic Research"" Quest"
+Anchovy,A small silver fish found in the ocean.,Ocean,"Spring
+ Fall",No Uses
+Tuna,A large fish that lives in the ocean.,"Ocean, Ginger Island oceans","Summer
+ Winter
+(All Seasons on Ginger Island)","Ocean Fish Bundle
+ Quality Fish Bundle Fish Taco"
+Sardine,A common ocean fish.,Ocean,"Spring
+ Fall
+ Winter",Ocean Fish Bundle Dish O' The Sea
+Bream,A fairly common river fish that becomes active at night.,River (Town+Forest),All Seasons,Night Fishing Bundle Baked Fish
+Largemouth Bass,A popular fish that lives in lakes.,Mountain Lake,All Seasons,"Lake Fish Bundle
+ Quality Fish Bundle Crispy Bass ""Fish Casserole"" Quest"
+Smallmouth Bass,A freshwater fish that is very sensitive to pollution.,"River (Town)
+Forest Pond","Spring
+ Fall",No Uses
+Rainbow Trout,A freshwater trout with colorful markings.,"River (Town+Forest)
+Mountain Lake",Summer,Trout Soup
+Salmon,Swims upstream to lay its eggs.,River (Town+Forest),Fall,Salmon Dinner
+Walleye,A freshwater fish caught at night.,"River (Town+Forest)
+Forest Pond
+Mountain Lake","Fall
+ Winter with Rain Totem","Night Fishing Bundle
+ Quality Fish Bundle"
+Perch,A freshwater fish of the winter.,"River (Town+Forest)
+Forest Pond
+Mountain Lake",Winter,No Uses
+Carp,A common pond fish.,"Mountain Lake
+Secret Woods Pond
+The Sewers",All Seasons,Lake Fish Bundle Carp Surprise
+Catfish,An uncommon fish found in streams.,"River (Town+Forest)
+Secret Woods Pond
+Witch's Swamp","Spring
+ Fall
+( Spring &
+ Summer in Secret Woods Pond)",River Fish Bundle Willy  (loved gift)
+Pike,A freshwater fish that's difficult to catch.,"River (Town+Forest)
+Forest Pond","Summer
+ Winter",No Uses
+Sunfish,A common river fish.,River (Town+Forest),"Spring
+ Summer",River Fish Bundle Baked Fish
+Red Mullet,Long ago these were kept as pets.,Ocean,"Summer
+ Winter",No Uses
+Herring,A common ocean fish.,Ocean,"Spring
+ Winter",No Uses
+Eel,"A long, slippery little fish.",Ocean,"Spring
+ Fall",Night Fishing Bundle Fried Eel Spicy Eel
+Octopus,A mysterious and intelligent creature.,Ocean,Summer,Master Fisher's Bundle Willy  (loved gift)
+Red Snapper,A popular fish with a nice red color.,Ocean,"Summer
+ Fall
+ Winter with Rain Totem",Ocean Fish Bundle
+Squid,A deep sea creature that can grow to enormous size.,Ocean,Winter,"Fried Calamari ""Catch a Squid"" Quest"
+Sea Cucumber,"A slippery, slimy creature found on the ocean floor.",Ocean,"Fall
+ Winter",Lucky Lunch Willy  (loved gift)
+Super Cucumber,"A rare, purple variety of sea cucumber.","Ocean, Ginger Island oceans","Summer
+ Fall
+(All Seasons on Ginger Island)",Wizard  (loved gift)
+Ghostfish,"A pale, blind fish found in underground lakes.","Mines (20, 60)
+Ghost drops",All Seasons,Specialty Fish Bundle
+Stonefish,A bizarre fish that's shaped like a brick.,Mines 20F,All Seasons,No Uses
+Ice Pip,A rare fish that thrives in extremely cold conditions.,Mines 60F,All Seasons,No Uses
+Lava Eel,It can somehow survive in pools of red-hot lava.,"Mines 100F
+Volcano Caldera",All Seasons,Master Fisher's Bundle
+Sandfish,It tries to hide using camouflage.,The Desert,All Seasons,Specialty Fish Bundle Penny  (loved gift)
+Scorpion Carp,It's like a regular carp but with a sharp stinger.,"The Desert
+*Requires fishing level 4*",All Seasons,Master Fisher's Bundle
+Flounder,"It lives on the bottom, so both eyes are on top of its head.","Ocean, Ginger Island oceans","Spring
+ Summer
+(All Seasons on Ginger Island)",Seafoam Pudding
+Midnight Carp,This shy fish only feels comfortable at night.,"Mountain Lake,
+Cindersap Forest pond,
+Ginger Island pond and river","Fall
+ Winter
+(All Seasons on Ginger Island)",Seafoam Pudding
+Sturgeon,An ancient bottom-feeder with a dwindling population. Females can live up to 150 years.,Mountain Lake,"Summer
+ Winter",Lake Fish Bundle Willy  (loved gift)
+Tiger Trout,A rare hybrid trout that cannot bear offspring of its own.,River (Town+Forest),"Fall
+ Winter",River Fish Bundle
+Bullhead,A relative of the catfish that eats a variety of foods off the lake bottom.,Mountain Lake,All Seasons,Lake Fish Bundle
+Tilapia,A primarily vegetarian fish that prefers warm water.,"Ocean, Ginger Island rivers","Summer
+ Fall
+(All Seasons on Ginger Island)",Ocean Fish Bundle
+Chub,A common freshwater fish known for its voracious appetite.,"Forest River
+Mountain Lake",All Seasons,Field Research Bundle
+Dorado,A fierce carnivore with brilliant orange scales.,River (Forest),Summer,No Uses
+Albacore,"Prefers temperature ""edges"" where cool and warm water meet.",Ocean,Fall,"""Fish Stew"" Quest"
+Albacore,"Prefers temperature ""edges"" where cool and warm water meet.",Ocean,Winter,"""Fish Stew"" Quest"
+Shad,"Lives in a school at sea, but returns to the rivers to spawn.",River (Town+Forest),"Spring
+ Summer
+ Fall","River Fish Bundle
+ Quality Fish Bundle"
+Lingcod,A fearsome predator that will eat almost anything it can cram into its mouth.,"River (Town+Forest)
+Mountain Lake",Winter,"""Catch a Lingcod"" Quest"
+Halibut,A flat fish that lives on the ocean floor.,Ocean,Spring,No Uses
+Halibut,A flat fish that lives on the ocean floor.,Ocean,Winter,No Uses
+Woodskip,A very sensitive fish that can only live in pools deep in the forest.,"Secret Woods Pond
+Forest Farm",All Seasons,Specialty Fish Bundle
+Void Salmon,"A salmon, twisted by void energy. The fresh meat is jet black, but rapidly turns pink when exposed to air.",Witch's Swamp,All Seasons,The Missing Bundle
+Slimejack,He's coated in a very thick layer of slime. He keeps slipping out of your hands!,Mutant Bug Lair,All Seasons,No Uses
+Stingray,"Despite having a toxic stinger, these fish are shy and prefer to avoid humans.",Pirate Cove (Ginger Island),All Seasons,No Uses
+Lionfish,"An aggressive, predatory fish with venomous spines.",Ginger Island Ocean,All Seasons,No Uses
+Blue Discus,A brightly colored tropical fish that is popular in aquariums.,Ginger Island Pond and Rivers,All Seasons,No Uses
+Crimsonfish,Lives deep in the ocean but likes to lay its eggs in the warm summer water.,East Pier on The Beach. Requires level 5 fishing.,Summer,"""Catch Crimsonfish"" Quest"
+Angler,Uses a bioluminescent dangler to attract prey.,North of JojaMart on the wooden plank bridge. Requires level 3 fishing.,Fall,No Uses
+Legend,The king of all fish! They said he'd never be caught.,The Mountain Lake near the log. Requires level 10 fishing.,Spring,"""Catch Legend"" Quest"
+Glacierfish,Builds a nest on the underside of glaciers.,South end of Arrowhead Island in Cindersap Forest. Requires level 6 fishing.,Winter,No Uses
+Mutant Carp,The strange waters of the sewer turned this carp into a monstrosity.,The Sewers,All Seasons,No Uses
+Son of Crimsonfish,"He hatched in the warm summer water, and followed in the footsteps of his father.",East Pier on The Beach. Requires level 5 fishing.,All Seasons,No Uses
+Ms. Angler,Uses a bioluminescent dangler to attract prey.,North of JojaMart on the wooden plank bridge. Requires level 3 fishing.,All Seasons,No Uses
+Legend II,The successor to the original Legend.,The Mountain Lake near the log. Requires level 10 fishing.,All Seasons,No Uses
+Glacierfish Jr.,The original Glacierfish had a son...,South end of Arrowhead Island in Cindersap Forest. Requires level 6 fishing.,All Seasons,No Uses
+Radioactive Carp,A carp that spent one too many years in toxic sludge.,The Sewers,All Seasons,No Uses
+Midnight Squid,A strange and mysterious denizen of the ocean's twilight depths.,Night Market - Submarine,Winter,No Uses
+Spook Fish,The huge eyes can detect the faint silhouettes of prey.,Night Market - Submarine,Winter,No Uses
+Blobfish,"This odd creature floats above the ocean floor, consuming any edible material in its path.",Night Market - Submarine,Winter,Master Fisher's Bundle

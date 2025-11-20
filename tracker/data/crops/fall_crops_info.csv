@@ -1,0 +1,15 @@
+crop_name,description,days_to_grow,regrowth,seed_price,sell_price,multiple_harvests,edible,season
+Amaranth,"A purple grain cultivated by an ancient civilization.",7,0,70,150,NO,NO,Fall
+Artichoke,"The bud of a thistle plant. The spiny outer leaves conceal a fleshy, filling interior.",8,0,30,160,NO,YES,Fall
+Beet,"A sweet and earthy root vegetable. As a bonus, the leaves make a great salad.",6,0,20,100,NO,YES,Fall
+Bok Choy,"The leafy greens and fibrous stalks are healthy and delicious.",4,0,50,80,NO,YES,Fall
+Corn,"One of the most popular grains. The sweet, fresh cobs are a summer favorite.",14,4,150,50,YES,YES,Fall
+Cranberries,"These tart red berries are a traditional winter food.",7,5,240,75,YES,YES,Fall
+Eggplant,"A rich and wholesome relative of the tomato. Delicious fried or stewed.",5,5,20,60,YES,YES,Fall
+Fairy Rose,"An old folk legend suggests that the sweet smell of this flower attracts fairies.",12,0,200,290,NO,NO,Fall
+Grape,"A sweet cluster of fruit.",10,3,60,80,YES,YES,Fall
+Pumpkin,"A fall favorite, grown for its crunchy seeds and delicately flavored flesh. As a bonus, the hollow shell can be carved into a festive decoration.",13,0,100,320,NO,YES,Fall
+Sunflower,"A common misconception is that the flower turns so it's always facing the sun.",8,0,200,80,NO,NO,Fall
+Sweet Gem Berry,"It's by far the sweetest thing you've ever smelled.",24,0,1000,3000,NO,NO,Fall
+Wheat,"One of the most widely cultivated grains. Makes a great flour for breads and cakes.",4,0,10,25,NO,NO,Fall
+Yam,"A starchy tuber with a lot of culinary versatility.",10,0,60,160,NO,YES,Fall
