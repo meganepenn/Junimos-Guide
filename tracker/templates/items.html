@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!--title-->
 <h2>Items</h2>
+<!-- instructions -->
 <p>Check off items as you get them in game!</p>
+<!-- table formatting -->
 <table class="sv-table">
     <thead>
         <tr>
+            <!-- table headers -->
             <th>Done</th>
             <th>Name</th>
             <th>Type</th>
@@ -13,6 +17,7 @@
         </tr>
     </thead>
     <tbody>
+        <!-- loop to populate table -->
         {% for name, type, season in items %}
         <tr>
             <td><input type="checkbox" class="sv-checkbox"></td>

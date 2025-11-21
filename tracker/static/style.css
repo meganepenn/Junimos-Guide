@@ -1,3 +1,10 @@
+/**
+    File: style.css
+    Description: a style file for The Junimo's Guide
+    Author: Megan Penn
+*/
+
+/* GENERAL FORMATTING */
 body {
     font-family: 'Monaco', sans-serif;
     background-color: #f2ede3;
@@ -15,6 +22,7 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
+/* NAV BAR */
 nav {
     background-color: #4C956C;
     padding: 15px;
@@ -33,6 +41,7 @@ nav a:hover {
     color: #2C6E49;
 }
 
+/* TABLE FORMATTING */
 .sv-checkbox {
     width: 20px;
     height: 20px;
@@ -69,6 +78,7 @@ nav a:hover {
     background-color: #efe9d9;
 }
 
+/* CUSTOMIZATION FOR ROMANCING */
 .romance-yes {
     color: #e366a7;
     font-weight: bold;
@@ -79,6 +89,7 @@ nav a:hover {
     font-style: italic;
 }
 
+/* DATA FORMATTING */
 ul.data-list {
     list-style-type: none;
     padding-left: 0;

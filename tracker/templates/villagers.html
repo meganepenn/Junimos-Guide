@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- title -->
 <h2>Villagers</h2>
+<!-- instructions -->
 <p>Check off villagers as you reach full friendship hearts!</p>
 
+<!-- table formatting -->
 <table class="sv-table">
     <thead>
         <tr>
+            <!-- headers -->
             <th>Done</th>
             <th>Name</th>
             <th>Birthday</th>
@@ -14,11 +18,13 @@
         </tr>
     </thead>
     <tbody>
+        <!-- for loop to populate tables -->
         {% for name, season, day, can_marry in villagers %}
         <tr>
             <td><input type="checkbox" class="sv-checkbox"></td>
             <td>{{ name }}</td> 
             <td>{{ season }} {{ day }}</td>
+            <!-- logic for marriage -->
             <td>
                 {% if can_marry %}
                     <span class="romance-yes">Can Be Romanced</span>

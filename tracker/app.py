@@ -3,6 +3,7 @@ import mysql.connector
 
 app = Flask(__name__)
 
+# connecting database
 def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
@@ -11,10 +12,12 @@ def get_db_connection():
         database="stardew"
     )
 
+# accessing home page
 @app.route("/")
 def home():
     return render_template("home.html")
 
+# accessing villagers page
 @app.route("/villagers")
 def villagers():
     db = get_db_connection()
@@ -24,8 +27,10 @@ def villagers():
     cursor.close()
     db.close()
 
+    # calling html file
     return render_template("villagers.html", villagers=rows)
 
+# accessing items page
 @app.route("/items")
 def items():
     db = get_db_connection()
@@ -37,6 +42,7 @@ def items():
     cursor.close()
     db.close()
 
+    # calling html file
     return render_template("items.html", items=rows)
 
 if __name__ == "__main__":
