@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Items</h2>
+<p>Check off items as you get them in game!</p>
+<table class="sv-table">
+    <thead>
+        <tr>
+            <th>Done</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Season</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name, type, season in items %}
+        <tr>
+            <td><input type="checkbox" class="sv-checkbox"></td>
+            <td>{{ name }}</td>
+            <td>{{ type }}</td>
+            <td>{{ season }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

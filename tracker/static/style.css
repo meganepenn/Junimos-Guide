@@ -1,0 +1,94 @@
+body {
+    font-family: 'Monaco', sans-serif;
+    background-color: #f2ede3;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+main {
+    padding: 30px;
+}
+
+h1, h2 {
+    color: #2d4d1e;
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: #4C956C;
+    padding: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #2C6E49;
+}
+
+.sv-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #4C956C;
+}
+
+.sv-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fffdfa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.sv-table th {
+    background-color: #4C956C;
+    color: white;
+    padding: 12px;
+    font-size: 1.1em;
+}
+
+.sv-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e0d9c5;
+}
+
+.sv-table tr:nth-child(even) {
+    background-color: #f6f2ea;
+}
+
+.sv-table tr:hover {
+    background-color: #efe9d9;
+}
+
+.romance-yes {
+    color: #e366a7;
+    font-weight: bold;
+}
+
+.romance-no {
+    color: #777;
+    font-style: italic;
+}
+
+ul.data-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.data-list li {
+    background: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+

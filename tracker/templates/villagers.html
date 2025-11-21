@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Villagers</h2>
+<p>Check off villagers as you reach full friendship hearts!</p>
+
+<table class="sv-table">
+    <thead>
+        <tr>
+            <th>Done</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Romance</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name, season, day, can_marry in villagers %}
+        <tr>
+            <td><input type="checkbox" class="sv-checkbox"></td>
+            <td>{{ name }}</td> 
+            <td>{{ season }} {{ day }}</td>
+            <td>
+                {% if can_marry %}
+                    <span class="romance-yes">Can Be Romanced</span>
+                {% else %}
+                    <span class="romance-no">Cannot Be Romanced</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
