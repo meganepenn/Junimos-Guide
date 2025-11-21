@@ -12,6 +12,12 @@ Databases:
 
 Description: A tracker for the video game Stardew Valley orginally created by ConcernedApe. The goal of this tracker is for users to save their game progress and easily reference which items they've yet to collect. This minimal design lists the villagers and items in game, along with relevant gameplay information. Additionally, it allows the user to check boxes for each item. 
 
+**TO RUN**
+python 3 [inital file path]/junimos-guide/tracker/app.py
+- A link to server will appear. Copy it from the terminal and paste it in the browser to navigate to the home page. 
+
+Recording: In the files under "Checkpoint1.mov"
+
 ER Diagram: In the files under "ERDiagram_Stardew.png"
 
 **NOTE ABOUT GITHUB**
