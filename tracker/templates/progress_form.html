@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if mode == "new" %}
+  <h2>Add Progress Entry</h2>
+{% else %}
+  <h2>Edit Progress Entry</h2>
+{% endif %}
+
+<form method="post" class="form-card">
+  {% if progress_row %}
+    {% set progress_id = progress_row[0] %}
+    {% set player_name = progress_row[1] %}
+    {% set bundleid = progress_row[2] %}
+    {% set completed = progress_row[3] %}
+    {% set notes = progress_row[4] %}
+  {% else %}
+    {% set player_name = "" %}
+    {% set bundleid = "" %}
+    {% set completed = False %}
+    {% set notes = "" %}
+  {% endif %}
+
+  <div class="form-row">
+    <label>Player Name</label>
+    <input type="text" name="player_name" value="{{ player_name }}" required>
+  </div>
+
+  <div class="form-row">
+    <label>Bundle</label>
+    <select name="bundleid" required>
+      {% for bid, bname in bundles %}
+      <option value="{{ bid }}" {% if bundleid == bid %}selected{% endif %}>
+        {{ bid }} - {{ bname }}
+      </option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <input type="checkbox" name="completed" {% if completed %}checked{% endif %}>
+      Completed
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>Notes</label>
+    <input type="text" name="notes" value="{{ notes }}">
+  </div>
+
+  <button type="submit" class="btn">Save</button>
+  <a href="{{ url_for('progress') }}" class="btn-secondary">Cancel</a>
+</form>
+{% endblock %}

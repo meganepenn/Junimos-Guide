@@ -1,13 +1,51 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- title -->
-<h1> The Junimo's Guide!</h1>
-<!-- general info -->
-<p> Welcome! Use the menu to navigate to the different items and villagers available in game! </p>
-<ul>
-    <!-- links to information pages -->
-    <li><a href="/villagers">Stardew Valley Villagers</a></li>
-    <li><a href="/items">Ingame Items</a></li>
-</ul>
+<section class="hero">
+  <div class="hero-text">
+    <h2 class="hero-title">Welcome to The Junimo's Guide 🌿</h2>
+    <p class="hero-subtitle">
+      Keep track of your community center progress and maintain your community relationships, all in one place!
+    </p>
+
+    <div class="hero-buttons">
+      <a href="{{ url_for('bundles') }}" class="btn-secondary">View Bundles</a>
+      <a href="{{ url_for('villagers') }}" class="btn-secondary">View Villagers</a>
+      <a href="{{ url_for('progress') }}" class="btn-secondary">Update Progress</a>
+
+    </div>
+  </div>
+</section>
+
+<section class="card-grid">
+  <article class="card">
+    <h3> Bundles</h3>
+    <p>See every Community Center bundle and the items they require.</p>
+    <a href="{{ url_for('bundles') }}" class="card-link">Open bundles →</a>
+  </article>
+
+  <article class="card">
+    <h3>Progress</h3>
+    <p>Log which bundles your player has completed and add notes.</p>
+    <a href="{{ url_for('progress') }}" class="card-link">View progress →</a>
+  </article>
+
+  <article class="card">
+    <h3>Items</h3>
+    <p>Browse crops, forage, and fish by type and season.</p>
+    <a href="{{ url_for('items') }}" class="card-link">Browse items →</a>
+  </article>
+
+  <article class="card">
+    <h3>Villagers</h3>
+    <p>Look up birthdays and who can be romanced in Pelican Town.</p>
+    <a href="{{ url_for('villagers') }}" class="card-link">See villagers →</a>
+  </article>
+
+  <article class="card">
+    <h3>Rooms</h3>
+    <p>See each room of the Community Center and its bundles.</p>
+    <a href="{{ url_for('rooms') }}" class="card-link">View rooms →</a>
+  </article>
+</section>
 {% endblock %}

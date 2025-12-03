@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Community Center Progress</h2>
+
+<form method="get" class="filter-form">
+  <label>
+    Player:
+    <input type="text" name="player_name" value="{{ selected_player }}">
+  </label>
+
+  <label>
+    Status:
+    <select name="status">
+      <option value=""        {{ "selected" if not selected_status else "" }}>All</option>
+      <option value="Completed" {{ "selected" if selected_status == "Completed" else "" }}>Completed</option>
+      <option value="Incomplete" {{ "selected" if selected_status == "Incomplete" else "" }}>Incomplete</option>
+    </select>
+  </label>
+
+  <button type="submit">Filter</button>
+</form>
+
+<p>
+  <a class="btn" href="{{ url_for('new_progress') }}">+ Add Progress Entry</a>
+</p>
+
+<table class="sv-table">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Bundle</th>
+      <th>Room</th>
+      <th>Completed?</th>
+      <th>Notes</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for progress_id, player_name, bundleid, bundle_name, room_name, completed, notes in progress_rows %}
+    <tr>
+      <td>{{ player_name }}</td>
+      <td>{{ bundle_name }}</td>
+      <td>{{ room_name }}</td>
+      <td>{{ "Yes" if completed else "No" }}</td>
+      <td>{{ notes }}</td>
+      <td>
+        <a href="{{ url_for('edit_progress', progress_id=progress_id) }}">Edit</a>
+        <form action="{{ url_for('delete_progress', progress_id=progress_id) }}" method="post" style="display:inline;">
+          <button type="submit" onclick="return confirm('Delete this progress entry?');">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

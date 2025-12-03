@@ -7,34 +7,49 @@
 <p>Check off villagers as you reach full friendship hearts!</p>
 
 <!-- table formatting -->
+<form method="get" class="filter-form">
+  <label>
+    Season:
+    <select name="season">
+      <option value="All">All</option>
+      <option value="Spring" {{ "selected" if selected_season == "Spring" else "" }}>Spring</option>
+      <option value="Summer" {{ "selected" if selected_season == "Summer" else "" }}>Summer</option>
+      <option value="Fall"   {{ "selected" if selected_season == "Fall"   else "" }}>Fall</option>
+      <option value="Winter" {{ "selected" if selected_season == "Winter" else "" }}>Winter</option>
+    </select>
+  </label>
+
+  <label>
+    <input type="checkbox" name="can_marry" value="Yes"
+           {% if can_marry_filter == "Yes" %}checked{% endif %}>
+    Only show romanceable
+  </label>
+
+  <button type="submit">Filter</button>
+</form>
+
+<p>
+  <a class="btn" href="{{ url_for('new_villager') }}">+ Add Villager</a>
+</p>
+
 <table class="sv-table">
-    <thead>
-        <tr>
-            <!-- headers -->
-            <th>Done</th>
-            <th>Name</th>
-            <th>Birthday</th>
-            <th>Romance</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- for loop to populate tables -->
-        {% for name, season, day, can_marry in villagers %}
-        <tr>
-            <td><input type="checkbox" class="sv-checkbox"></td>
-            <td>{{ name }}</td> 
-            <td>{{ season }} {{ day }}</td>
-            <!-- logic for marriage -->
-            <td>
-                {% if can_marry %}
-                    <span class="romance-yes">Can Be Romanced</span>
-                {% else %}
-                    <span class="romance-no">Cannot Be Romanced</span>
-                {% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Lives In</th>
+      <th>Romance?</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for name, season, day, lives_in, can_marry in villagers %}
+    <tr>
+      <td>{{ name }}</td>
+      <td>{{ season }} {{ day }}</td>
+      <td>{{ lives_in }}</td>
+      <td>{{ "Can be romanced" if can_marry else "Cannot be romanced" }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
 {% endblock %}
-

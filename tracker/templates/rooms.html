@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Community Center Rooms</h2>
+
+<table class="sv-table">
+  <thead>
+    <tr>
+      <th>Room ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for roomid, name in rooms %}
+    <tr>
+      <td>{{ roomid }}</td>
+      <td>{{ name }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

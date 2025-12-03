@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Bundles</h2>
+
+<form method="get" class="filter-form">
+  <label>
+    Room:
+    <select name="roomid">
+      <option value="All">All</option>
+      {% for roomid, room_name in rooms_list %}
+      <option value="{{ roomid }}" {% if selected_room == roomid|string %}selected{% endif %}>
+        {{ room_name }}
+      </option>
+      {% endfor %}
+    </select>
+  </label>
+
+  <label>
+    <input type="checkbox" name="seasonal" value="Yes"
+           {% if seasonal_filter == "Yes" %}checked{% endif %}>
+    Seasonal bundles only
+  </label>
+
+  <button type="submit">Filter</button>
+</form>
+
+<table class="sv-table">
+  <thead>
+    <tr>
+      <th>Bundle</th>
+      <th>Room</th>
+      <th>Seasonal?</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for bundleid, bundle_name, room_name, seasonal in bundles %}
+    <tr>
+      <td>{{ bundle_name }}</td>
+      <td>{{ room_name }}</td>
+      <td>{{ "Yes" if seasonal else "No" }}</td>
+      <td><a href="{{ url_for('bundle_detail', bundle_id=bundleid) }}">View items</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

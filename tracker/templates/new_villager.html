@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add New Villager</h2>
+
+<form action="{{ url_for('new_villager') }}" method="POST" class="form-card">
+  <div class="form-row">
+    <label>Name</label>
+    <input type="text" name="villager_name" required>
+  </div>
+
+  <div class="form-row">
+    <label>Birthday Season</label>
+    <select name="birthday_season">
+      <option value="Spring">Spring</option>
+      <option value="Summer">Summer</option>
+      <option value="Fall">Fall</option>
+      <option value="Winter">Winter</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label>Birthday Day</label>
+    <input type="text" name="birthday_day">
+  </div>
+
+  <div class="form-row">
+    <label>Lives In</label>
+    <input type="text" name="lives_in">
+  </div>
+
+  <div class="form-row">
+    <label>
+      <input type="checkbox" name="can_marry">
+      Romanceable
+    </label>
+  </div>
+
+  <button type="submit" class="btn">Save</button>
+  <a href="{{ url_for('villagers') }}" class="btn-secondary">Cancel</a>
+</form>
+{% endblock %}

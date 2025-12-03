@@ -6,27 +6,47 @@
 <!-- instructions -->
 <p>Check off items as you get them in game!</p>
 <!-- table formatting -->
-<table class="sv-table">
-    <thead>
-        <tr>
-            <!-- table headers -->
-            <th>Done</th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Season</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- loop to populate table -->
-        {% for name, type, season in items %}
-        <tr>
-            <td><input type="checkbox" class="sv-checkbox"></td>
-            <td>{{ name }}</td>
-            <td>{{ type }}</td>
-            <td>{{ season }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<form method="get" class="filter-form">
+  <label>
+    Type:
+    <select name="type">
+      <option value="All">All</option>
+      <option value="forage" {{ "selected" if item_type == "forage" else "" }}>Forage</option>
+      <option value="crop"   {{ "selected" if item_type == "crop"   else "" }}>Crop</option>
+      <option value="fish"   {{ "selected" if item_type == "fish"   else "" }}>Fish</option>
+    </select>
+  </label>
 
+  <label>
+    Season:
+    <select name="season">
+      <option value="All">All</option>
+      <option value="Spring" {{ "selected" if season == "Spring" else "" }}>Spring</option>
+      <option value="Summer" {{ "selected" if season == "Summer" else "" }}>Summer</option>
+      <option value="Fall"   {{ "selected" if season == "Fall"   else "" }}>Fall</option>
+      <option value="Winter" {{ "selected" if season == "Winter" else "" }}>Winter</option>
+    </select>
+  </label>
+
+  <button type="submit">Filter</button>
+</form>
+
+<table class="sv-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Season</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for name, type_, season_ in items %}
+    <tr>
+      <td>{{ name }}</td>
+      <td>{{ type_ }}</td>
+      <td>{{ season_ }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
