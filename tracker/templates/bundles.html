@@ -1,8 +1,10 @@
+<!-- base html file for The Junimo's Guide -->
 {% extends "base.html" %}
 
 {% block content %}
 <h2>Bundles</h2>
 
+<!-- filtering logic -->
 <form method="get" class="filter-form">
   <label>
     Room:
@@ -25,6 +27,7 @@
   <button type="submit">Filter</button>
 </form>
 
+<!-- table formatting -->
 <table class="sv-table">
   <thead>
     <tr>

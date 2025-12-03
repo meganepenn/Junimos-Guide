@@ -52,6 +52,7 @@ def villagers():
                            selected_season=season,
                            can_marry_filter=can_marry_filter)
 
+# accessing rooms page
 @app.route("/rooms")
 def rooms():
     db = get_db_connection()
@@ -62,6 +63,7 @@ def rooms():
     db.close()
     return render_template("rooms.html", rooms=rows)
 
+# accessing bundles page
 @app.route("/bundles")
 def bundles():
     db = get_db_connection()
@@ -102,6 +104,7 @@ def bundles():
         seasonal_filter=seasonal,
     )
 
+# mapping to bundle details from bundle page
 @app.route("/bundles/<int:bundle_id>")
 def bundle_detail(bundle_id):
     db = get_db_connection()
@@ -169,6 +172,7 @@ def items():
                            item_type=item_type,
                            season=season)
 
+# adding a new villager form 
 @app.route("/villagers/new", methods=["GET", "POST"])
 def new_villager():
     if request.method == "POST":
@@ -192,6 +196,7 @@ def new_villager():
 
     return render_template("new_villager.html")
 
+# accessing the progress page
 @app.route("/progress")
 def progress():
     db = get_db_connection()
@@ -237,7 +242,7 @@ def progress():
         selected_status=status
     )
 
-
+# adding a new progress entry
 @app.route("/progress/new", methods=["GET", "POST"])
 def new_progress():
     db = get_db_connection()
@@ -267,7 +272,7 @@ def new_progress():
 
     return render_template("progress_form.html", mode="new", bundles=bundles, progress_row=None)
 
-
+# editing a progress entry
 @app.route("/progress/<int:progress_id>/edit", methods=["GET", "POST"])
 def edit_progress(progress_id):
     db = get_db_connection()
@@ -313,7 +318,7 @@ def edit_progress(progress_id):
 
     return render_template("progress_form.html", mode="edit", bundles=bundles, progress_row=row)
 
-
+# deleting a progress entry
 @app.route("/progress/<int:progress_id>/delete", methods=["POST"])
 def delete_progress(progress_id):
     db = get_db_connection()
