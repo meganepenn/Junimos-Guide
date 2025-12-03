@@ -16,10 +16,8 @@ Description: A tracker for the video game Stardew Valley orginally created by Co
 python 3 [inital file path]/junimos-guide/tracker/app.py
 - A link to server will appear. Copy it from the terminal and paste it in the browser to navigate to the home page. 
 
-Recording: In the files under "Checkpoint1.mov"
+Recording: In the files under "Checkpoint2.mov"
 
-ER Diagram: In the files under "ERDiagram_Stardew.png"
+ER Diagram: In the files under "ER_Diagram.png"
 
-**NOTE ABOUT GITHUB**
-* My phone is broken so I cannot authenticate myself into my github account and it just made me reverify myself like a couple hours before I had to submit this. I am pretty sure it is a private repository, so you won't be able to see it, but I can send a public version tomorrow as soon as I can get a new phone!! *
 GitHub Repository: https://github.com/meganepenn/Junimos-Guide.git
