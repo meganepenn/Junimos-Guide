@@ -10,7 +10,9 @@ Databases:
     4. https://stardewvalleywiki.com/Stardew_Valley_Wiki
         - wiki used for additional gameplay information and community center requirements
 
-Description: A tracker for the video game Stardew Valley orginally created by ConcernedApe. The goal of this tracker is for users to save their game progress and easily reference which items they've yet to collect. This minimal design lists the villagers and items in game, along with relevant gameplay information. Additionally, it allows the user to check boxes for each item. 
+Description/Goal: A tracker for the video game Stardew Valley orginally created by ConcernedApe. The goal of this tracker is for users to save their game progress and easily reference which items they've yet to collect. This minimal design lists the villagers and items in game, along with relevant gameplay information. Additionally, it allows the user to check boxes for each item. 
+
+Interaction: Upon login, a user is able to view analytics about the game, add to their community center progress, and keep track of their different farms/accounts.
 
 **TO RUN**
 python 3 [inital file path]/junimos-guide/tracker/app.py
