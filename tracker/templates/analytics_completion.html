@@ -1,0 +1,51 @@
+<!-- html for completion status view -->
+{% extends "base.html" %}
+
+{% block title %}Room Completion{% endblock %}
+
+{% block content %}
+<h2><span class="section-icon">⭐</span>Room Completion</h2>
+
+<!-- card design -->
+<div class="cozy-card">
+    <div class="cozy-card-header mb-2">
+        <span>Bundle progress by room (current farm)</span>
+    </div>
+    <p class="mb-3">
+        This view summarizes how many bundles exist in each room and how many of them
+        are marked as completed for your selected farm.
+    </p>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>Room ID</th>
+                <th>Room Name</th>
+                <th>Total Bundles</th>
+                <th>Completed Bundles</th>
+                <th>Completion %</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- calculating completion rates -->
+            {% for r in rows %}
+                <tr>
+                    <td>{{ r.roomid }}</td>
+                    <td>{{ r.room_name }}</td>
+                    <td>{{ r.total_bundles }}</td>
+                    <td>{{ r.completed_bundles or 0 }}</td>
+                    <td>
+                        {% if r.completion_pct is not none %}
+                            {{ r.completion_pct }}%
+                        {% else %}
+                            0.0%
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

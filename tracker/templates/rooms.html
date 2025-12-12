@@ -1,23 +1,36 @@
+<!-- html for rooms page -->
 {% extends "base.html" %}
 
-{% block content %}
-<h2>Community Center Rooms</h2>
+{% block title %}Rooms{% endblock %}
 
-<!-- table formatting -->
-<table class="sv-table">
-  <thead>
-    <tr>
-      <th>Room ID</th>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for roomid, name in rooms %}
-    <tr>
-      <td>{{ roomid }}</td>
-      <td>{{ name }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<!-- header -->
+{% block content %}
+<h2><span class="section-icon">🏚</span>Community Center Rooms</h2>
+
+<!-- card design -->
+<div class="cozy-card">
+    <p class="mb-3">
+        Each room in the Community Center contains one or more bundles. Use this list
+        to understand the overall structure before diving into bundles and items.
+    </p>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Room Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for r in rooms %}
+                <tr>
+                    <td>{{ r[0] }}</td>
+                    <td>{{ r[1] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

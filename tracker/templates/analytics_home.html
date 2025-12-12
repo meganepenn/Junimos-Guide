@@ -1,0 +1,59 @@
+<!-- html for analytics home -->
+{% extends "base.html" %}
+
+{% block title %}Analytics{% endblock %}
+
+<!-- header -->
+{% block content %}
+<h2><span class="section-icon">📊</span>Analytics</h2>
+
+<!-- community center progress chart -->
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="cozy-card">
+            <div class="cozy-card-header">
+                <span>Room completion</span>
+            </div>
+            <p class="mb-2">
+                See how many bundles are completed in each Community Center room
+                for your currently selected farm.
+            </p>
+            <a href="{{ url_for('analytics_completion') }}" class="btn btn-success w-100">
+                View completion by room
+            </a>
+        </div>
+    </div>
+
+    <!-- community center stats -->
+    <div class="col-md-4">
+        <div class="cozy-card">
+            <div class="cozy-card-header">
+                <span>Room difficulty</span>
+            </div>
+            <p class="mb-2">
+                See which Community Center rooms and bundles require the most items overall.
+            </p>
+            <a href="{{ url_for('analytics_rooms') }}" class="btn btn-success w-100">
+                View room analytics
+            </a>
+        </div>
+    </div>
+
+
+<!-- birthday analytics -->
+    <div class="col-md-4">
+        <div class="cozy-card">
+            <div class="cozy-card-header">
+                <span>Birthday overview</span>
+            </div>
+            <p class="mb-2">
+                Browse villager birthdays by season and plan your social calendar
+                around festivals and farming.
+            </p>
+            <a href="{{ url_for('analytics_birthdays') }}" class="btn btn-success w-100">
+                View birthday analytics
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

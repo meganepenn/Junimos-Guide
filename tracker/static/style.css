@@ -1,126 +1,231 @@
-/**
-    File: style.css
-    Description: a style file for The Junimo's Guide
-    Author: Megan Penn
-*/
+/* global css sheet */
+:root {
+    --forest-green: #3b6b4b;
+    --sage: #88b08b;
+    --mint: #cde8cf;
+    --cream: #fff9ec;
+    --brown: #7b5434;
+    --accent-pink: #f7b6d9;
+    --accent-yellow: #ffe18a;
+    --text-dark: #2f3b2f;
+}
 
-/* GENERAL FORMATTING */
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f3efe7;
-  margin: 0;
-  color: #2d2a24;
+    font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--text-dark);
+    background:
+        radial-gradient(circle at 0 0, #fdf5e6 0, transparent 55%),
+        radial-gradient(circle at 100% 0, #e4ffe4 0, transparent 55%),
+        linear-gradient(180deg, #f7fff6 0, #fdf6eb 60%, #fefcf7 100%);
+    min-height: 100vh;
 }
 
-.site-header {
-  background: #4e7b4b;
-  color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.container {
+    max-width: 960px;
+    background: rgba(255, 249, 236, 0.9);
+    border-radius: 24px;
+    padding: 24px 28px 32px;
+    box-shadow: 0 14px 40px rgba(85, 114, 88, 0.25);
+    margin-bottom: 40px;
 }
 
-.site-title {
-  margin: 0;
-  font-size: 1.4rem;
+/* formatting for new nav */
+.navbar {
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 8px 24px rgba(46, 97, 65, 0.35);
+    background: linear-gradient(135deg, var(--forest-green), var(--sage));
 }
 
-.main-nav a {
-  color: #fdfae7;
-  text-decoration: none;
-  margin-left: 12px;
-  font-weight: 500;
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
 }
 
-.main-nav a:hover {
-  text-decoration: underline;
+.navbar-brand span.icon {
+    font-size: 1.4rem;
 }
 
-.content {
-  padding: 20px;
+.navbar-nav .nav-link {
+    font-weight: 500;
+    border-radius: 999px;
+    padding-inline: 14px;
+    margin-right: 4px;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
 
-.sv-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-  background: #fffdfa;
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
-.sv-table th,
-.sv-table td {
-  border: 1px solid #ddd0b5;
-  padding: 8px 10px;
-  text-align: left;
+.navbar-text {
+    font-size: 0.9rem;
 }
 
-.sv-table th {
-  background: #f5e5b8;
+/* text formatting */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: 0.03em;
 }
 
-.filter-form {
-  background: #fff8dd;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.filter-form label {
-  font-size: 0.9rem;
+h2 .section-icon {
+    font-size: 1.4rem;
 }
 
-.btn,
-button {
-  background: #4e7b4b;
-  color: #fff;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
+/* panel formatting */
+.cozy-card {
+    background: var(--cream);
+    border-radius: 22px;
+    padding: 18px 20px;
+    border: 2px solid rgba(143, 176, 140, 0.35);
+    box-shadow: 0 10px 24px rgba(93, 122, 96, 0.18);
+    margin-bottom: 20px;
 }
 
+.cozy-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* different forms */
+.form-label {
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.form-control,
+.form-select {
+    border-radius: 999px;
+    border: 2px solid var(--mint);
+    background-color: #ffffff;
+    padding-inline: 16px;
+    padding-block: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+textarea.form-control {
+    border-radius: 18px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 0.2rem rgba(186, 219, 187, 0.6);
+    background-color: #ffffff;
+}
+
+/* check box formatting */
+.form-check-input {
+    border-radius: 10px;
+    border: 2px solid var(--sage);
+}
+
+.form-check-input:checked {
+    background-color: var(--sage);
+    border-color: var(--sage);
+}
+
+/* button formatting */
+.btn {
+    border-radius: 999px;
+    font-weight: 600;
+    border-width: 0;
+    padding-inline: 18px;
+    padding-block: 9px;
+    transition: transform 0.1s ease, box-shadow 0.15s ease, filter 0.1s ease;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--sage), var(--forest-green));
+    box-shadow: 0 8px 18px rgba(65, 105, 75, 0.4);
+}
+
+.btn-success:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(55, 94, 64, 0.45);
+}
+
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-danger,
 .btn-secondary {
-  background: #b3a489;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.9rem;
+    border-width: 2px;
+    border-radius: 999px;
 }
 
-.btn:hover,
-button:hover,
-.btn-secondary:hover {
-  opacity: 0.9;
+.table .btn-sm {
+    padding-inline: 12px;
+    padding-block: 5px;
+    font-size: 0.8rem;
 }
 
-.form-card {
-  background: #fffdfa;
-  padding: 15px;
-  border-radius: 6px;
-  max-width: 400px;
+/* table formatting */
+.table {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    overflow: hidden;
 }
 
-.form-row {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
+.table > :not(caption) > * > * {
+    padding-block: 0.6rem;
+    vertical-align: middle;
 }
 
-.form-row label {
-  font-weight: 500;
-  margin-bottom: 4px;
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(205, 232, 207, 0.25);
 }
 
-.form-row input,
-.form-row select {
-  padding: 6px;
-  border-radius: 4px;
-  border: 1px solid #c9bca5;
+.badge {
+    border-radius: 999px;
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-weight: 600;
+}
+
+.badge.bg-success {
+    background-color: var(--sage) !important;
+}
+
+.badge.bg-secondary {
+    background-color: #c9c9c9 !important;
+}
+
+/* feedback */
+.alert {
+    border-radius: 18px;
+}
+
+/* bubble look */
+.bubble-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.bubble-tag {
+    border-radius: 999px;
+    padding: 5px 12px;
+    background-color: var(--mint);
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
 }

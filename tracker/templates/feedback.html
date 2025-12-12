@@ -1,0 +1,27 @@
+<!-- html for feedback -->
+{% extends "base.html" %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block content %}
+<h2>Send Feedback</h2>
+<p>Tell us what you think about the Stardew Progress Tracker!</p>
+
+<!-- feedback form -->
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select name="category" class="form-select">
+            <option value="General">General</option>
+            <option value="Bug">Bug</option>
+            <option value="Feature Request">Feature Request</option>
+            <option value="UI">UI</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea name="message" class="form-control" rows="4" required></textarea>
+    </div>
+    <button class="btn btn-success" type="submit">Submit Feedback</button>
+</form>
+{% endblock %}

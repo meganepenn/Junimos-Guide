@@ -1,56 +1,46 @@
+<!-- html for progress form -->
 {% extends "base.html" %}
 
+{% block title %}
+    {% if mode == "edit" %}Edit Progress{% else %}New Progress{% endif %}
+{% endblock %}
+
 {% block content %}
-{% if mode == "new" %}
-  <h2>Add Progress Entry</h2>
-{% else %}
-  <h2>Edit Progress Entry</h2>
-{% endif %}
+<h2>
+    {% if mode == "edit" %}Edit Progress{% else %}New Progress Entry{% endif %}
+</h2>
 
-<!-- formatting form for adding progress update-->
-<form method="post" class="form-card">
-  {% if progress_row %}
-    {% set progress_id = progress_row[0] %}
-    {% set player_name = progress_row[1] %}
-    {% set bundleid = progress_row[2] %}
-    {% set completed = progress_row[3] %}
-    {% set notes = progress_row[4] %}
-  {% else %}
-    {% set player_name = "" %}
-    {% set bundleid = "" %}
-    {% set completed = False %}
-    {% set notes = "" %}
-  {% endif %}
+<!-- progress form -->
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Bundle</label>
+        <select name="bundleid" class="form-select" required>
+            {% for b in bundles %}
+                {# bundles is a list of tuples (bundleid, name) #}
+                <option value="{{ b[0] }}"
+                    {% if progress_row and b[0] == progress_row["bundleid"] %}selected{% endif %}>
+                    {{ b[0] }} – {{ b[1] }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
 
-  <div class="form-row">
-    <label>Player Name</label>
-    <input type="text" name="player_name" value="{{ player_name }}" required>
-  </div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" name="completed" id="completed"
+            {% if progress_row and progress_row["completed"] %}checked{% endif %}>
+        <label class="form-check-label" for="completed">
+            Bundle completed
+        </label>
+    </div>
 
-  <div class="form-row">
-    <label>Bundle</label>
-    <select name="bundleid" required>
-      {% for bid, bname in bundles %}
-      <option value="{{ bid }}" {% if bundleid == bid %}selected{% endif %}>
-        {{ bid }} - {{ bname }}
-      </option>
-      {% endfor %}
-    </select>
-  </div>
+    <div class="mb-3">
+        <label class="form-label">Notes</label>
+        <textarea name="notes" class="form-control" rows="3">{% if progress_row %}{{ progress_row["notes"] }}{% endif %}</textarea>
+    </div>
 
-  <div class="form-row">
-    <label>
-      <input type="checkbox" name="completed" {% if completed %}checked{% endif %}>
-      Completed
-    </label>
-  </div>
-
-  <div class="form-row">
-    <label>Notes</label>
-    <input type="text" name="notes" value="{{ notes }}">
-  </div>
-
-  <button type="submit" class="btn">Save</button>
-  <a href="{{ url_for('progress') }}" class="btn-secondary">Cancel</a>
+    <button class="btn btn-success" type="submit">
+        {% if mode == "edit" %}Save Changes{% else %}Create Progress{% endif %}
+    </button>
+    <a href="{{ url_for('progress') }}" class="btn btn-secondary">Cancel</a>
 </form>
 {% endblock %}

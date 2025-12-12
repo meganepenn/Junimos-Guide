@@ -1,0 +1,86 @@
+<!-- html for birthday analytic view -->
+{% extends "base.html" %}
+
+{% block title %}Birthday Analytics{% endblock %}
+
+{% block content %}
+<!-- header -->
+<h2><span class="section-icon">🎂</span>Birthday Analytics</h2>
+
+<!-- distribution view -->
+<div class="row g-4">
+    <div class="col-lg-5">
+        <div class="cozy-card">
+            <div class="cozy-card-header">
+                <span>Birthdays by season</span>
+            </div>
+            <p class="mb-2">
+                See how villager birthdays are distributed across the year.
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th>Season</th>
+                        <th># of Villagers</th>
+                        <th>Names & days</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for s in by_season %}
+                        <tr>
+                            <td>{{ s.season }}</td>
+                            <td>{{ s.villager_count }}</td>
+                            <td style="max-width: 250px;">{{ s.villagers }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<!-- birthday calendar formatting -->
+    <div class="col-lg-7">
+        <div class="cozy-card">
+            <div class="cozy-card-header mb-2">
+                <span>Full birthday calendar</span>
+            </div>
+            <p class="mb-2">
+                Sorted by season, then day. Use this as a guide for planning gifts around
+                farming tasks and festivals.
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Season</th>
+                        <th>Day</th>
+                        <th>Lives In</th>
+                        <th>Marriage Candidate?</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for v in upcoming %}
+                        <tr>
+                            <td>{{ v.villager_name }}</td>
+                            <td>{{ v.birthday_season }}</td>
+                            <td>{{ v.birthday_day }}</td>
+                            <td>{{ v.lives_in }}</td>
+                            <td>
+                                {% if v.can_marry %}
+                                    <span class="badge bg-success">Yes</span>
+                                {% else %}
+                                    <span class="badge bg-secondary">No</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

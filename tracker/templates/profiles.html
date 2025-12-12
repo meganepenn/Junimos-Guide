@@ -1,0 +1,62 @@
+<!-- html for profiles -->
+{% extends "base.html" %}
+
+{% block title %}Player Profiles{% endblock %}
+
+{% block content %}
+<h2>Your Player Profiles</h2>
+
+<!-- new profile creation form -->
+<div class="row">
+    <div class="col-md-6">
+        <h4>Create New Profile</h4>
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Display Name</label>
+                <input name="display_name" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Favorite Farm Name (optional)</label>
+                <input name="favorite_farm_name" type="text" class="form-control">
+            </div>
+            <button class="btn btn-success" type="submit">Create Profile</button>
+        </form>
+    </div>
+
+    <!-- existing profiles table -->
+    <div class="col-md-6">
+        <h4>Existing Profiles</h4>
+        {% if profiles %}
+            <table class="table table-sm table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Display Name</th>
+                    <th>Favorite Farm</th>
+                    <th>Created</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for p in profiles %}
+                    <tr>
+                        <td>{{ p.player_id }}</td>
+                        <td>{{ p.display_name }}</td>
+                        <td>{{ p.favorite_farm_name or "-" }}</td>
+                        <td>{{ p.created_at }}</td>
+                        <td>
+                            <a class="btn btn-sm btn-outline-success"
+                               href="{{ url_for('select_profile', player_id=p.player_id) }}">
+                                Use this profile
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No profiles yet. Create one on the left.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

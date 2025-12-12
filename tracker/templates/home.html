@@ -1,54 +1,122 @@
-<!-- base html file for The Junimo's Guide -->
+<!-- home page html -->
 {% extends "base.html" %}
 
+{% block title %}Home{% endblock %}
+
+<!-- header -->
 {% block content %}
-<!-- quick access buttons -->
-<section class="hero">
-  <div class="hero-text">
-    <h2 class="hero-title">Welcome to The Junimo's Guide 🌿</h2>
-    <p class="hero-subtitle">
-      Keep track of your community center progress and maintain your community relationships, all in one place!
-    </p>
+<h2><span class="section-icon">🌿</span>Welcome to Junimo Guide</h2>
 
-    <div class="hero-buttons">
-      <a href="{{ url_for('bundles') }}" class="btn-secondary">View Bundles</a>
-      <a href="{{ url_for('villagers') }}" class="btn-secondary">View Villagers</a>
-      <a href="{{ url_for('progress') }}" class="btn-secondary">Update Progress</a>
+<!-- main card -->
+<div class="row g-4">
+    <div class="col-lg-7">
+        <div class="cozy-card">
+            <div class="cozy-card-header">
+                <span>Start tracking your Community Center progress</span>
+            </div>
+            <p>
+                Welcome to The Junimo's Guide! Here you can track your 
+                Community Center bundle progress, explore bundle requirements,
+                and plan your farming and gifting around villager birthdays.
+                Navigate to any page to get started!
+            </p>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+                <a href="{{ url_for('villagers') }}" class="btn btn-success">
+                    View Villagers
+                </a>
+                <a href="{{ url_for('bundles') }}" class="btn btn-outline-success">
+                    Explore Bundles
+                </a>
+                <a href="{{ url_for('items') }}" class="btn btn-outline-success">
+                    Browse Items
+                </a>
+            </div>
+        </div>
 
+        <!-- session info card -->
+        {% if g.user %}
+        <div class="cozy-card">
+            <div class="cozy-card-header">
+                <span>Your current session</span>
+            </div>
+            <p class="mb-2">
+                Logged in as <strong>{{ g.user.email }}</strong>.
+            </p>
+            <ul class="mb-2">
+                <li>
+                    Active profile:
+                    {% if session.player_id %}
+                        <strong>#{{ session.player_id }}</strong>
+                        (<a href="{{ url_for('profiles') }}">change</a>)
+                    {% else %}
+                        <em>none selected</em> –
+                        <a href="{{ url_for('profiles') }}">choose a profile</a>
+                    {% endif %}
+                </li>
+                <li>
+                    Active farm:
+                    {% if session.farm_id %}
+                        <strong>#{{ session.farm_id }}</strong>
+                        (<a href="{{ url_for('farms') }}">change</a>)
+                    {% else %}
+                        <em>none selected</em> –
+                        <a href="{{ url_for('farms') }}">select or create a farm</a>
+                    {% endif %}
+                </li>
+            </ul>
+
+            <div class="d-flex flex-wrap gap-2">
+                <a href="{{ url_for('profiles') }}" class="btn btn-success btn-sm">
+                    Manage Profiles
+                </a>
+                <a href="{{ url_for('farms') }}" class="btn btn-success btn-sm">
+                    Manage Farms
+                </a>
+                <a href="{{ url_for('progress') }}" class="btn btn-outline-success btn-sm">
+                    View Bundle Progress
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <div class="cozy-card">
+            <div class="cozy-card-header">
+                <span>Get started</span>
+            </div>
+            <p>To save progress per-player and per-farm, please sign up or log in.</p>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="{{ url_for('signup') }}" class="btn btn-success">Sign Up</a>
+                <a href="{{ url_for('login') }}" class="btn btn-outline-success">Login</a>
+            </div>
+        </div>
+        {% endif %}
     </div>
-  </div>
-</section>
 
-<!-- home page format -->
-<section class="card-grid">
-  <article class="card">
-    <h3> Bundles</h3>
-    <p>See every Community Center bundle and the items they require.</p>
-    <a href="{{ url_for('bundles') }}" class="card-link">Open bundles →</a>
-  </article>
-
-  <article class="card">
-    <h3>Progress</h3>
-    <p>Log which bundles your player has completed and add notes.</p>
-    <a href="{{ url_for('progress') }}" class="card-link">View progress →</a>
-  </article>
-
-  <article class="card">
-    <h3>Items</h3>
-    <p>Browse crops, forage, and fish by type and season.</p>
-    <a href="{{ url_for('items') }}" class="card-link">Browse items →</a>
-  </article>
-
-  <article class="card">
-    <h3>Villagers</h3>
-    <p>Look up birthdays and who can be romanced in Pelican Town.</p>
-    <a href="{{ url_for('villagers') }}" class="card-link">See villagers →</a>
-  </article>
-
-  <article class="card">
-    <h3>Rooms</h3>
-    <p>See each room of the Community Center and its bundles.</p>
-    <a href="{{ url_for('rooms') }}" class="card-link">View rooms →</a>
-  </article>
-</section>
+    <!-- quick navigation -->
+    <div class="col-lg-5">
+        <div class="cozy-card">
+            <div class="cozy-card-header">
+                <span>Quick navigation</span>
+            </div>
+            <div class="list-group">
+                <a href="{{ url_for('villagers') }}" class="list-group-item list-group-item-action">
+                    👥 Villagers · filter by birthday & marriage
+                </a>
+                <a href="{{ url_for('bundles') }}" class="list-group-item list-group-item-action">
+                    📜 Bundles · see requirements by room
+                </a>
+                <a href="{{ url_for('items') }}" class="list-group-item list-group-item-action">
+                    🌾 Items · browse by type & season
+                </a>
+                {% if g.user %}
+                <a href="{{ url_for('progress') }}" class="list-group-item list-group-item-action">
+                    ⭐ Progress · your bundle completion tracking
+                </a>
+                <a href="{{ url_for('feedback') }}" class="list-group-item list-group-item-action">
+                    💌 Feedback · tell us what to improve
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

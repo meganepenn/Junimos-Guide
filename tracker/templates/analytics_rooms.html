@@ -1,0 +1,99 @@
+<!-- html for room analytical view -->
+{% extends "base.html" %}
+
+{% block title %}Room Analytics{% endblock %}
+
+{% block content %}
+<h2><span class="section-icon">🏚</span>Room Difficulty Analytics</h2>
+
+<!-- general stats -->
+<div class="row g-4">
+    <div class="col-lg-6">
+        <div class="cozy-card">
+            <div class="cozy-card-header mb-2">
+                <span>Bundles & items by room</span>
+            </div>
+            <p class="mb-2">
+                For each Community Center room, this summary shows how many bundles it contains
+                and how many unique items are required in total.
+            </p>
+
+            {% if room_rows %}
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                        <tr>
+                            <th>Room ID</th>
+                            <th>Room Name</th>
+                            <th># Bundles</th>
+                            <th># Items</th>
+                            <th>Avg Items / Bundle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!-- getting stats -->
+                        {% for r in room_rows %}
+                            <tr>
+                                <td>{{ r.roomid }}</td>
+                                <td>{{ r.room_name }}</td>
+                                <td>{{ r.num_bundles }}</td>
+                                <td>{{ r.num_items }}</td>
+                                <td>
+                                    {% if r.avg_items_per_bundle is not none %}
+                                        {{ r.avg_items_per_bundle }}
+                                    {% else %}
+                                        —
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p>No room/bundle data found. Check that ROOM, BUNDLE, and COMMUNITY_CENTER_ITEM are populated.</p>
+            {% endif %}
+        </div>
+    </div>
+
+<!-- difficulty ranking-->
+    <div class="col-lg-6">
+        <div class="cozy-card">
+            <div class="cozy-card-header mb-2">
+                <span>Top 10 “hardest” bundles</span>
+            </div>
+            <p class="mb-2">
+                Bundles ranked by how many unique items they require. Use this to decide which
+                rooms and bundles might be the biggest projects to tackle.
+            </p>
+
+            {% if hardest_bundles %}
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                        <tr>
+                            <th>Bundle ID</th>
+                            <th>Bundle Name</th>
+                            <th>Room</th>
+                            <th># Required Items</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for b in hardest_bundles %}
+                            <tr>
+                                <td>{{ b.bundleid }}</td>
+                                <td>{{ b.bundle_name }}</td>
+                                <td>{{ b.room_name }}</td>
+                                <td>{{ b.num_items }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <p>No bundles found. Check that BUNDLE and COMMUNITY_CENTER_ITEM are populated.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

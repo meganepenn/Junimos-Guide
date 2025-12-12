@@ -1,51 +1,85 @@
-<!-- base html file for The Junimo's Guide -->
+<!-- html for bundles -->
 {% extends "base.html" %}
 
+{% block title %}Bundles{% endblock %}
+
 {% block content %}
-<h2>Bundles</h2>
+<h2><span class="section-icon">📜</span>Bundles</h2>
 
-<!-- filtering logic -->
-<form method="get" class="filter-form">
-  <label>
-    Room:
-    <select name="roomid">
-      <option value="All">All</option>
-      {% for roomid, room_name in rooms_list %}
-      <option value="{{ roomid }}" {% if selected_room == roomid|string %}selected{% endif %}>
-        {{ room_name }}
-      </option>
-      {% endfor %}
-    </select>
-  </label>
+<div class="cozy-card mb-4">
+  <!-- filtering -->
+    <div class="cozy-card-header">
+        <span>🔎</span>
+        <span>Narrow down bundles</span>
+    </div>
+    <form class="row g-3" method="get">
+        <div class="col-md-5">
+            <label class="form-label">Room</label>
+            <select name="roomid" class="form-select">
+                <option value="All" {% if selected_room == "All" or not selected_room %}selected{% endif %}>
+                    All rooms
+                </option>
+                {% for r in rooms_list %}
+                    <option value="{{ r[0] }}" {% if selected_room == r[0]|string %}selected{% endif %}>
+                        {{ r[0] }} – {{ r[1] }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Seasonal bundles only?</label>
+            <select name="seasonal" class="form-select">
+                <option value="" {% if not seasonal_filter %}selected{% endif %}>Show all</option>
+                <option value="Yes" {% if seasonal_filter == "Yes" %}selected{% endif %}>Seasonal only</option>
+            </select>
+        </div>
+        <div class="col-md-3 d-flex align-items-end gap-2">
+            <button class="btn btn-success" type="submit">Apply Filters</button>
+            <a href="{{ url_for('bundles') }}" class="btn btn-secondary">Reset</a>
+        </div>
+    </form>
+</div>
 
-  <label>
-    <input type="checkbox" name="seasonal" value="Yes"
-           {% if seasonal_filter == "Yes" %}checked{% endif %}>
-    Seasonal bundles only
-  </label>
+<!-- actual bundle table -->
+<div class="cozy-card">
+    <div class="cozy-card-header mb-2">
+        <span>Bundle list</span>
+    </div>
 
-  <button type="submit">Filter</button>
-</form>
-
-<!-- table formatting -->
-<table class="sv-table">
-  <thead>
-    <tr>
-      <th>Bundle</th>
-      <th>Room</th>
-      <th>Seasonal?</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for bundleid, bundle_name, room_name, seasonal in bundles %}
-    <tr>
-      <td>{{ bundle_name }}</td>
-      <td>{{ room_name }}</td>
-      <td>{{ "Yes" if seasonal else "No" }}</td>
-      <td><a href="{{ url_for('bundle_detail', bundle_id=bundleid) }}">View items</a></td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Bundle</th>
+                <th>Room</th>
+                <th>Seasonal?</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for b in bundles %}
+                <tr>
+                    <td>{{ b[0] }}</td>
+                    <td>{{ b[1] }}</td>
+                    <td>{{ b[2] }}</td>
+                    <td>
+                        {% if b[3] %}
+                            <span class="badge bg-success">Yes</span>
+                        {% else %}
+                            <span class="badge bg-secondary">No</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a class="btn btn-sm btn-outline-primary"
+                           href="{{ url_for('bundle_detail', bundle_id=b[0]) }}">
+                            View items
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

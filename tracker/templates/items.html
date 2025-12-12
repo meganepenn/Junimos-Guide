@@ -1,54 +1,98 @@
+<!-- html for items -->
 {% extends "base.html" %}
+{% block title %}Items{% endblock %}
 
 {% block content %}
-<!--title-->
-<h2>Items</h2>
-<!-- instructions -->
-<p>Check off items as you get them in game!</p>
+<h2><span class="section-icon">🎒</span>Items</h2>
 
-<!-- filter logic -->
-<form method="get" class="filter-form">
-  <label>
-    Type:
-    <select name="type">
-      <option value="All">All</option>
-      <option value="forage" {{ "selected" if item_type == "forage" else "" }}>Forage</option>
-      <option value="crop"   {{ "selected" if item_type == "crop"   else "" }}>Crop</option>
-      <option value="fish"   {{ "selected" if item_type == "fish"   else "" }}>Fish</option>
-    </select>
-  </label>
+<!-- filtering -->
+<div class="cozy-card mb-4">
+  <div class="cozy-card-header mb-2">
+    <span>🔍</span>
+    <span>Filter & search</span>
+  </div>
 
-  <label>
-    Season:
-    <select name="season">
-      <option value="All">All</option>
-      <option value="Spring" {{ "selected" if season == "Spring" else "" }}>Spring</option>
-      <option value="Summer" {{ "selected" if season == "Summer" else "" }}>Summer</option>
-      <option value="Fall"   {{ "selected" if season == "Fall"   else "" }}>Fall</option>
-      <option value="Winter" {{ "selected" if season == "Winter" else "" }}>Winter</option>
-    </select>
-  </label>
+  <form method="get" class="row g-3 align-items-end">
+    <div class="col-md-4">
+      <label for="type" class="form-label">Type</label>
+      <select name="type" id="type" class="form-select">
+        <option value="All" {% if item_type == "All" %}selected{% endif %}>All types</option>
+        {% for t in types %}
+          <option value="{{ t }}" {% if item_type == t %}selected{% endif %}>
+            {{ t }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
 
-  <button type="submit">Filter</button>
-</form>
+    <div class="col-md-4">
+      <label for="season" class="form-label">Season</label>
+      <select name="season" id="season" class="form-select">
+        <option value="All" {% if season == "All" %}selected{% endif %}>All seasons</option>
+        {% for s in seasons %}
+          <option value="{{ s }}" {% if season == s %}selected{% endif %}>
+            {{ s }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
 
-<!-- table formatting -->
-<table class="sv-table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Season</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for name, type_, season_ in items %}
-    <tr>
-      <td>{{ name }}</td>
-      <td>{{ type_ }}</td>
-      <td>{{ season_ }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+    <div class="col-md-4">
+      <label for="q" class="form-label">Search</label>
+      <input
+        type="text"
+        id="q"
+        name="q"
+        class="form-control"
+        placeholder="Name or usage..."
+        value="{{ search or '' }}"
+      >
+    </div>
+
+    <div class="col-12 d-flex gap-2">
+      <button type="submit" class="btn btn-success">Apply filters</button>
+      <a href="{{ url_for('items') }}" class="btn btn-outline-secondary">Clear</a>
+    </div>
+  </form>
+</div>
+
+<!-- item table -->
+<div class="cozy-card">
+  <div class="cozy-card-header mb-2">
+    <span>Item list</span>
+  </div>
+  <p class="mb-2">
+    Showing all items that match your filters. This includes crops, forage, fish,
+    animal products, artisan goods, monster loot, and more.
+  </p>
+
+  {% if items %}
+    <div class="table-responsive">
+      <table class="table table-striped table-sm align-middle">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Season</th>
+            <th>Source</th>
+            <th>Used In</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+          <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.type or "—" }}</td>
+            <td>{{ item.season or "—" }}</td>
+            <td>{{ item.source or "—" }}</td>
+            <td>{{ item.used_in or "—" }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p>No items match these filters yet. Try clearing the filters or adding more items.</p>
+  {% endif %}
+</div>
 {% endblock %}
